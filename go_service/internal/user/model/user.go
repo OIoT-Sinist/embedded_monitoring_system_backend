@@ -1,6 +1,9 @@
 package model
 
 import (
+	"github.com/anxiu0101/openiot-hub/internal/user/pack"
+	"github.com/anxiu0101/openiot-hub/pkg/consts"
+	"github.com/anxiu0101/openiot-hub/pkg/errno"
 	"gorm.io/gorm"
 )
 
@@ -25,7 +28,7 @@ type (
 		OrgID  uint
 		// 组织树路径，如 "Factory1/Dept1/Group1"
 		Path     string
-		Position string
+		Position []string
 	}
 
 	// Organization 组织结构，包含了所有的结构例如公司和部门
@@ -39,3 +42,45 @@ type (
 		FatherOrgID uint
 	}
 )
+
+// CheckUserByID 通过 UserID 查询用户是否存在
+func CheckUserByID(userId uint) bool {
+	var (
+		count int64
+	)
+
+	db.Table(consts.UserTableName).Where("id = ?", userId).Count(&count)
+	return count > 0
+}
+
+func GetUserInfoByID(userId uint) (pack.UserInfo, int) {
+	var (
+		info pack.UserInfo
+	)
+
+	if err := db.Table(consts.UserTableName).
+		Where("id = ?", userId).
+		Find(&info).Error; err == gorm.ErrRecordNotFound {
+		return info, errno.ErrorDatabaseRecordNotFound
+	} else if err != nil {
+		return info, errno.ErrorDatabaseQuery
+	}
+
+	return info, errno.Success
+}
+
+func GetPositionsByID(userId uint) ([]string, int) {
+	var (
+		positions []string
+	)
+
+	if err := db.Table(consts.AuthorityTableName).
+		Where("user_id = ?", userId).
+		Find(&positions).Error; err == gorm.ErrRecordNotFound {
+		return positions, errno.ErrorDatabaseRecordNotFound
+	} else if err != nil {
+		return positions, errno.ErrorDatabaseQuery
+	}
+
+	return positions, errno.Success
+}

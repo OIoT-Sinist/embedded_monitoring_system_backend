@@ -4,9 +4,9 @@ import (
 	"github.com/jinzhu/configor"
 )
 
-// Global Config Variable
+// Config Global configurations Variable
 var Config = struct {
-	AppMode string `default:debug`
+	AppMode string `default:"debug"`
 	AppName string `default:"openiot-hub"`
 
 	Server struct {
@@ -46,6 +46,15 @@ var Config = struct {
 	}
 
 	SMS struct{}
+
+	OSS struct {
+		EndPoint        string
+		AccessKeyId     string
+		AccessKeySecret string
+		BucketName      string
+		MainDirecotory  int
+		PartSize        int
+	}
 }{}
 
 func Setup() {
