@@ -1,0 +1,1 @@
+{"doc":" 物联网设备数据传输业务对象 iot_device_trans_data\n\n @author ruoyi\n @date 2023-11-24\n","fields":[{"name":"id","doc":" id\n"},{"name":"co2","doc":" co2\n"},{"name":"luminance","doc":" 亮度\n"},{"name":"humidity","doc":" 湿度\n"},{"name":"temprature","doc":" 温度\n"},{"name":"customData","doc":" 自定义数据\n"}],"enumConstants":[],"methods":[],"constructors":[]}

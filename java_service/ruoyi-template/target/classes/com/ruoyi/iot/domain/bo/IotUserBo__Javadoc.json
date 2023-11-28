@@ -1,0 +1,1 @@
+{"doc":" 用户业务对象 iot_user\n\n @author ruoyi\n @date 2023-11-24\n","fields":[{"name":"userId","doc":" id\n"},{"name":"username","doc":" 用户名\n"},{"name":"password","doc":" 密码\n"},{"name":"type","doc":" 用户类型\n"},{"name":"phone","doc":" 手机号\n"},{"name":"email","doc":" 邮箱\n"},{"name":"ground","doc":" 可见范围\n"}],"enumConstants":[],"methods":[],"constructors":[]}
