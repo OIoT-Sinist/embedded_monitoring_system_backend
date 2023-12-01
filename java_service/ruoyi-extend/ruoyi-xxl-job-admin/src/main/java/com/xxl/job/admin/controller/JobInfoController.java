@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 /**
- * index controller
+ * index com.iot.device.controller
  *
  * @author xuxueli 2015-12-19 16:13:16
  */

@@ -51,14 +51,12 @@
     {
       "name": "xxl.job.executor.log-retention-days",
       "type": "java.lang.Integer",
-      "sourceType": "com.ruoyi.job.config.properties.XxlJobProperties$Executor",
-      "defaultValue": 0
+      "sourceType": "com.ruoyi.job.config.properties.XxlJobProperties$Executor"
     },
     {
       "name": "xxl.job.executor.port",
       "type": "java.lang.Integer",
-      "sourceType": "com.ruoyi.job.config.properties.XxlJobProperties$Executor",
-      "defaultValue": 0
+      "sourceType": "com.ruoyi.job.config.properties.XxlJobProperties$Executor"
     }
   ],
   "hints": []
