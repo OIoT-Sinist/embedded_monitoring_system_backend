@@ -319,12 +319,6 @@
 
             <dependency>
                 <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-template</artifactId>
-                <version>${ruoyi-vue-plus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.ruoyi</groupId>
                 <artifactId>iot-user</artifactId>
                 <version>${ruoyi-vue-plus.version}</version>
             </dependency>
@@ -332,12 +326,6 @@
             <dependency>
                 <groupId>com.ruoyi</groupId>
                 <artifactId>iot-device</artifactId>
-                <version>${ruoyi-vue-plus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>iot-admin</artifactId>
                 <version>${ruoyi-vue-plus.version}</version>
             </dependency>
         </dependencies>
@@ -354,10 +342,8 @@
         <module>ruoyi-extend</module>
         <module>ruoyi-oss</module>
         <module>ruoyi-sms</module>
-        <module>ruoyi-template</module>
         <module>iot-device</module>
         <module>iot-user</module>
-        <module>iot-admin</module>
     </modules>
     <packaging>pom</packaging>
 

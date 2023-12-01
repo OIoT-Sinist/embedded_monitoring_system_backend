@@ -92,4 +92,9 @@ public interface SysUserMapper extends BaseMapperPlus<SysUserMapper, SysUser, Sy
      */
     SysUser selectUserById(Long userId);
 
+    /**
+     * 获取最新的一条数据
+     * @return
+     */
+    SysUser selectByCreateTime();
 }
