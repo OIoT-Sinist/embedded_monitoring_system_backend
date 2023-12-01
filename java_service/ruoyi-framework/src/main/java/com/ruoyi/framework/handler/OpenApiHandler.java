@@ -108,7 +108,7 @@ public class OpenApiHandler extends OpenAPIService {
     private final Optional<JavadocProvider> javadocProvider;
 
     /**
-     * The Basic error controller.
+     * The Basic error com.iot.device.controller.
      */
     private static Class<?> basicErrorController;
 
@@ -121,7 +121,7 @@ public class OpenApiHandler extends OpenAPIService {
             try {
                 basicErrorController = Class.forName("org.springframework.boot.autoconfigure.web.BasicErrorController");
             } catch (ClassNotFoundException classNotFoundException) {
-                //Basic error controller class not found
+                //Basic error com.iot.device.controller class not found
                 LOGGER.trace(classNotFoundException.getMessage());
             }
         }

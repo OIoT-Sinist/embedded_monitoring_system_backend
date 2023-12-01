@@ -196,8 +196,8 @@ public class VelocityUtils {
             fileName = StringUtils.format("{}/service/I{}Service.java", javaPath, className);
         } else if (template.contains("serviceImpl.java.vm")) {
             fileName = StringUtils.format("{}/service/impl/{}ServiceImpl.java", javaPath, className);
-        } else if (template.contains("controller.java.vm")) {
-            fileName = StringUtils.format("{}/controller/{}Controller.java", javaPath, className);
+        } else if (template.contains("com.iot.device.controller.java.vm")) {
+            fileName = StringUtils.format("{}/com.iot.device.controller/{}Controller.java", javaPath, className);
         } else if (template.contains("mapper.xml.vm")) {
             fileName = StringUtils.format("{}/{}Mapper.xml", mybatisPath, className);
         } else if (template.contains("sql.vm")) {
