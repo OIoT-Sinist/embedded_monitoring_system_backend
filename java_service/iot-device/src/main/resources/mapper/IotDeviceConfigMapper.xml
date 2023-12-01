@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.device.mapper.IotDeviceConfigMapper">
+
+    <resultMap type="com.ruoyi.device.domain.IotDeviceConfig" id="IotDeviceConfigResult">
+        <result property="id" column="id"/>
+        <result property="locationLatitude" column="location_latitude"/>
+        <result property="locationLogitude" column="location_logitude"/>
+        <result property="co2Range" column="co2_range"/>
+        <result property="luminanceRange" column="luminance_range"/>
+        <result property="humidityRange" column="humidity_range"/>
+        <result property="tempratureRange" column="temprature_range"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+
+</mapper>
